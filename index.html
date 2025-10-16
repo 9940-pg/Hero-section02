@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Company - Modern Software Solutions</title>
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="font-poppins">
+
+  <!-- Hero Section with Full Background Image -->
+ <div class="relative min-h-screen bg-cover bg-center bg-no-repeat"
+     style="background-image: url('hero-3/1.jpg'); background-position: center -3%; "
+>
+
+    <!-- Optional overlay to improve text readability -->
+    <div class="absolute inset-0 bg-black/30 z-10"></div>
+
+<!-- Header Section -->
+<header class="fixed top-0 left-0 w-full z-50 bg-white/50 dark:bg-gray-900/60 backdrop-blur-md shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- Logo / Brand with Flag -->
+    <a href="#" class="flex items-center gap-3 text-4xl font-extrabold text-gray-600">
+      FINSECURE
+      <img src="https://flagcdn.com/us.svg" alt="US Flag" class="w-13 h-6 rounded-md shadow-md"/>
+    </a>
+
+    <!-- Desktop Navigation + Button -->
+    <div class="hidden md:flex flex-row items-center space-x-6">
+      <!-- Navigation -->
+      <nav class="flex flex-row items-center space-x-6 text-gray-700 dark:text-gray-200 font-medium">
+        <a href="#" class="relative hover:text-green-600 transition-colors after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-green-500 after:transition-all hover:after:w-full">Home</a>
+        <a href="#" class="relative hover:text-green-600 transition-colors after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-green-500 after:transition-all hover:after:w-full">Plans</a>
+        <a href="#" class="relative hover:text-green-600 transition-colors after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-green-500 after:transition-all hover:after:w-full">About</a>
+        <a href="#" class="relative hover:text-green-600 transition-colors after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-green-500 after:transition-all hover:after:w-full">Contact</a>
+      </nav>
+
+      <!-- Gradient Button -->
+      <a href="#"
+         class="ml-4 px-6 py-2 font-medium rounded-full bg-gradient-to-r from-green-500 to-blue-500 text-white hover:from-blue-500 hover:to-green-500 transition-colors inline-flex items-center">
+        Get Started
+        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Mobile Hamburger (always on right) -->
+ <!-- Hamburger Menu Button -->
+<div class="md:hidden flex items-center">
+  <button id="menuBtn" class="flex flex-col justify-between w-7 h-6 text-gray-600 dark:text-gray-200 focus:outline-none">
+    <span class="block h-0.5 w-full bg-current rounded"></span>
+    <span class="block h-0.5 w-full bg-current rounded"></span>
+    <span class="block h-0.5 w-full bg-current rounded"></span>
+  </button>
+</div>
+
+
+  </div>
+
+  <!-- Mobile Dropdown Menu (hidden by default) -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 shadow-lg">
+    <nav class="flex flex-col items-center py-4 space-y-3 text-gray-700 dark:text-gray-200 font-medium">
+      <a href="#" class="hover:text-green-600 transition">Home</a>
+      <a href="#" class="hover:text-green-600 transition">Plans</a>
+      <a href="#" class="hover:text-green-600 transition">About</a>
+      <a href="#" class="hover:text-green-600 transition">Contact</a>
+      <a href="#" class="mt-2 px-6 py-2 font-medium rounded-full bg-gradient-to-r from-green-500 to-blue-500 text-white hover:from-blue-500 hover:to-green-500 transition-colors inline-flex items-center">
+        Get Started
+        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- JS for Mobile Menu -->
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+
+    <!-- Hero Content -->
+    <div class="relative z-20 flex flex-col lg:flex-row items-center max-w-7xl mx-auto min-h-screen px-6 py-20">
+      
+<!-- Left Hero Content with Fade-In -->
+<div class="w-full lg:w-1/2 text-center lg:text-left text-white relative z-20 mt-28 lg:mt-20
+            opacity-0 translate-y-6 transition-all duration-1000 ease-out animate-fadeIn">
+  <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-wide text-white drop-shadow-2xl">
+    Empowering<br />
+    America's <span class="text-blue-0">Financial</span><br />
+    Freedom
+  </h1>
+
+  <p class="text-lg sm:text-xl mb-10 text-gray-200/90 leading-relaxed max-w-lg drop-shadow-md">
+    Unlock tailored <span class="font-semibold text-green-400">supplemental benefit plans</span> and 
+    <span class="font-semibold text-blue-400">comprehensive life insurance solutions</span> 
+    designed to safeguard your <span class="font-semibold text-green-300">financial future</span> 
+    with confidence and clarity.
+  </p>
+
+  <!-- Gradient Button with Arrow -->
+  <a href="#"
+     class="inline-flex items-center px-10 py-4 font-medium rounded-full bg-gradient-to-r from-green-500 to-blue-500 text-white 
+            hover:from-blue-500 hover:to-green-500 transition-all duration-300 shadow-lg hover:shadow-2xl 
+            transform hover:scale-105 motion-safe:animate-pulse hover:animate-none">
+    Learn More
+    <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 h-6 w-6 animate-bounce hover:animate-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+    </svg>
+  </a>
+</div>
+
+
+<style>
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.3s; /* optional delay */
+}
+</style>
+
+
+
+
+      <!-- Right Side (removed old circular image) -->
+      <div class="w-full lg:w-1/2 mt-12 lg:mt-0">
+        <!-- Optional decorative shapes could go here if needed -->
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
